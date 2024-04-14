@@ -4,7 +4,7 @@ function VideoPlayer({ setShowVideoPlayer }) {
             <div className="top-bar">
                 <div className="app-name">
                     <img className="app-icon" src="https://res.cloudinary.com/penry/image/upload/c_lpad,g_center,r_0,w_65/v1474990261/media_player_file_sqjlgm.png" />
-                    <h4>Video Player</h4>
+                    <h4>Video Player (Volume up) </h4>
                 </div>
                 <div className="button-grp">
                     <img onClick={() => setShowVideoPlayer(false)} className="app-icon" src="https://www.manasjha.me/windows-xp/images/icons/cross.png" alt="" />
