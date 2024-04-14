@@ -1,0 +1,352 @@
+body {
+  background-image: url(https://i.imgur.com/Zk6TR5k.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Tahoma";
+}
+
+@font-face {
+  font-family: Tahoma;
+  src: url(/src/fonts/windows-xp-tahoma.ttf);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  background-color: #1291e8;
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end; */
+  text-align: center;
+  padding: 0;
+  margin: 0 !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 6%;
+  width: 100%;
+  z-index: 100;
+}
+
+@keyframes hidden {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.nav {
+  background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #333 100%) center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 0%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.logo {
+  margin: 0vw 1vw;
+  padding: 1vw 0;
+}
+
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0.5rem;
+  align-items: center;
+  background-color: #1398ec;
+  width: 8rem;
+  height: 85%;
+  border-radius: 3px;
+  border-left: black 1px solid;
+  box-shadow: 0px 1px 4px #000;
+}
+
+.time p {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Tahoma";
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.1rem;
+  width: fit-content;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 7%;
+  padding-right: 1%;
+}
+
+.tab-inner {
+  font-family: "Tahoma";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 200 !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  height: 70%;
+  margin: 0 0.2% 0 0.2%;
+  background-color: #1398ec;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #1398ec 0%, #1398ec 9%, #1398ec 18%, #245edb 92%, #333 100%) center/cover no-repeat;
+}
+
+.tab-inner:hover {
+  background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #333 100%) center/cover no-repeat;
+  opacity: 0.9;
+}
+
+.tab-inner h4 {
+  font-size: 1.4rem;
+}
+
+.tab-icons {
+  padding: 2px 5px;
+  width: 35px;
+  height: auto;
+}
+
+
+.icons {
+  padding: 2px;
+  width: 30px;
+  height: auto;
+}
+
+.icons:hover {
+  transform: scale(1.2);
+
+}
+
+.dropdown {
+  display: none;
+}
+
+.start-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: fit-content;
+  height: 100%;
+  bottom: 0;
+  font-size: 1.1rem;
+  color: white;
+  font-style: italic;
+  padding: 5px 15px;
+  text-shadow: 1px 1px 1px #333;
+  border-radius: 0px 15px 20px 0px;
+  border: none;
+  transform: skewX(-3deg);
+  left: -5px;
+  box-shadow: 0px 5px 10px #79ce71 inset;
+  background: radial-gradient(circle, #5eac56 0%, #3c873c 100%) center/cover no-repeat;
+  cursor: pointer;
+}
+
+.start-col:hover {
+  box-shadow: 0px 5px 10px #63a05e inset;
+  background: radial-gradient(circle, #5eac56 0%, #3c873c 100%) center/cover no-repeat;
+}
+
+.start {
+  background-color: transparent;
+  border: none;
+  padding-left: 10px;
+  font-size: 2rem;
+  color: white;
+  font-style: italic;
+  font-weight: 700;
+  font-family: "Tahoma";
+}
+
+.start-img {
+  width: auto;
+  height: 80%;
+  z-index: 101;
+}
+
+#startMenu {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+  width: fit-content;
+  height: auto;
+  background: linear-gradient(to bottom, #1398ec 0%, #1398ec 9%, #1398ec 18%, #245edb 92%, #333 100%) center/cover no-repeat;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px #000;
+  bottom: 6%;
+  left: 1px;
+}
+
+.inner-start {
+  background-color: #bdbebd;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.option {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  padding: 5px;
+}
+
+.option img {
+  width: 25px;
+  height: auto;
+  display: block;
+}
+
+.option p {
+  margin: 0 0.8rem;
+}
+
+.more::after {
+  content: "►";
+  left: 90%;
+  position: absolute;
+  float: right;
+}
+
+.inner-start p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Tahoma";
+}
+
+.inner-option {
+  display: none;
+  position: absolute;
+  left: 95%;
+  min-width: 100%;
+  padding: 0 0.2rem;
+  margin-left: 0.5rem;
+  background-color: #bdbebd;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+}
+
+.inner-option p {
+  margin: 0.5rem;
+  min-width: max-content;
+}
+
+.option:hover,
+.inner-option:hover {
+  background-color: grey;
+}
+
+.option:hover .inner-option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.option button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .tab-inner {
+    font-size: 1.2rem;
+    width: min-content;
+    padding: 0;
+    margin: 0 0.2rem;
+  }
+
+  .tab-inner h4 {
+    display: none;
+  }
+
+  .time p {
+    font-size: 1rem;
+  }
+
+  .tabs {
+    padding-left: 17%;
+    justify-content: center;
+  }
+
+  .icons {
+    width: 25px;
+  }
+
+  .icons:hover {
+    transform: scale(1.1);
+  }
+
+  .start-col {
+    font-size: 1rem;
+    padding: 5px 8px;
+  }
+
+  .tab-icons {
+    padding: 0;
+    width: 30px;
+    margin: 0 0.2rem;
+  }
+
+  .start {
+    font-size: 1.5rem;
+    padding-left: 4px;
+  }
+
+  .start-img {
+    height: 70%;
+  }
+
+  .inner-start p {
+    font-size: 1.2rem;
+  }
+
+  .option p {
+    font-size: 1.2rem;
+  }
+
+  .more::after {
+    content: "►";
+    left: 90%;
+    position: absolute;
+    float: right;
+  }
+}
