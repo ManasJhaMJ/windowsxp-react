@@ -2,7 +2,7 @@ import { useState } from "react"
 import Option from "./Option"
 import OptionMore from "./OptionMore"
 
-function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer }) {
+function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer, setShowImageViewer }) {
 
     const [isExplorerClicked, setIsExplorerClicked] = useState(false)
 
@@ -22,7 +22,8 @@ function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer }) {
                     <OptionMore src1="https://res.cloudinary.com/penry/image/upload/w_65,h_65,c_lpad/v1474990246/directory_pictures_ualddt.png"
                         app1="Photos"
                         src2="https://res.cloudinary.com/penry/image/upload/q_100/v1474990272/pictures_bt9tfg.ico"
-                        app2='huehuehue.png' />
+                        app2='huehuehue.png'
+                        click={() => setShowImageViewer(true)} />
 
                     <OptionMore src1="https://res.cloudinary.com/penry/image/upload//w_40,h_40,c_lpad/v1474990234/cd_audio_cd_mcloiq.png"
                         app1="Music"

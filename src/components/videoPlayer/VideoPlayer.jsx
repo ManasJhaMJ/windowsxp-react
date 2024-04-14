@@ -1,4 +1,4 @@
-function VideoPlayer() {
+function VideoPlayer({ setShowVideoPlayer }) {
     return (
         <div id="program">
             <div className="top-bar">
@@ -7,11 +7,11 @@ function VideoPlayer() {
                     <h4>Video Player</h4>
                 </div>
                 <div className="button-grp">
-                    <img className="app-icon" src="https://www.manasjha.me/windows-xp/images/icons/cross.png" alt="" />
+                    <img onClick={() => setShowVideoPlayer(false)} className="app-icon" src="https://www.manasjha.me/windows-xp/images/icons/cross.png" alt="" />
                 </div>
             </div>
             <div className="video">
-                <iframe width="1800" height="900" src="https://www.youtube.com/embed/8WFjE-a--PA?autoplay=1&rel=0" title="Super windows error meme || windows69.vercel.app" allow="autoplay; ; gyroscope;" referrerPolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe width="1800" height="900" src="https://www.youtube.com/embed/8WFjE-a--PA?loop=1&autoplay=1&fs=0&controls=0&modestbranding=1&rel=0" title="Super windows error meme || windows69.vercel.app" allow="autoplay;gyroscope;"></iframe>
             </div>
         </div>
     )
