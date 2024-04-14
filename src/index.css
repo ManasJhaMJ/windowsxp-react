@@ -286,6 +286,59 @@ nav {
   padding: 0;
 }
 
+#program {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 60vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #1398ec;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 1px 4px #000;
+}
+
+.app-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 0.1rem;
+}
+
+.app-name h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.app-icon {
+  width: 30px;
+  height: auto;
+  margin: 0 0.5rem;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 600px) {
   .tab-inner {
     font-size: 1.2rem;
@@ -348,5 +401,10 @@ nav {
     left: 90%;
     position: absolute;
     float: right;
+  }
+
+  #program {
+    width: 80vw;
+    height: 40vh;
   }
 }

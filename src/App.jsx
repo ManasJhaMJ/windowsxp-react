@@ -1,16 +1,19 @@
 import { useState } from 'react'
 import Navbar from './components/navbar/Navbar'
 import StartMenu from './components/start-menu/StartMenu'
+import VideoPlayer from './components/videoPlayer/VideoPlayer';
 
 function App() {
 
   const [isNavbarHovered, setIsNavbarHovered] = useState(false);
   const [isMenuHovered, setIsMenuHovered] = useState(false);
+  const [showVideoPlayer, setShowVideoPlayer] = useState(false);
 
   return (
     <>
       <Navbar onHoverChange={setIsNavbarHovered} />
-      {isNavbarHovered || isMenuHovered ? <StartMenu onMouseEnter={() => setIsMenuHovered(true)} onMouseLeave={() => setIsMenuHovered(false)} /> : null}
+      {isNavbarHovered || isMenuHovered ? <StartMenu onMouseEnter={() => setIsMenuHovered(true)} onMouseLeave={() => setIsMenuHovered(false)} setShowVideoPlayer={setShowVideoPlayer} /> : null}
+      {showVideoPlayer && <VideoPlayer setShowVideoPlayer={setShowVideoPlayer} />}
     </>
   )
 }

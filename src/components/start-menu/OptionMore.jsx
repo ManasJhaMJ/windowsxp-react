@@ -5,7 +5,9 @@ function OptionMore(props) {
             <p>{props.app1}</p>
             <div className='inner-option'>
                 <img src={props.src2} alt="program" />
-                <button>
+                <button
+                    onClick={props.click}
+                >
                     <p>{props.app2}</p>
                 </button>
             </div>
