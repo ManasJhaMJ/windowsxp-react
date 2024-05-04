@@ -5,6 +5,7 @@ import StartMenu from './components/start-menu/StartMenu'
 import VideoPlayer from './components/videoPlayer/VideoPlayer';
 import ImageViewer from './components/imageViewer/ImageViewer';
 import AudioListener from './components/audioListener/AudioListener';
+import Run from './components/Run/Run'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   const [showVideoPlayer, setShowVideoPlayer] = useState(false);
   const [showImageViewer, setShowImageViewer] = useState(false);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
+  const [isRunning, setIsRunning] = useState(false);
 
   return (
     <>
@@ -21,10 +23,12 @@ function App() {
         setShowVideoPlayer={setShowVideoPlayer}
         setShowImageViewer={setShowImageViewer}
         setShowAudioPlayer={setShowAudioPlayer}
+        setIsRunning={setIsRunning}
       /> : null}
       {showVideoPlayer && <VideoPlayer setShowVideoPlayer={setShowVideoPlayer} />}
       {showImageViewer && <ImageViewer setShowImageViewer={setShowImageViewer} />}
       {showAudioPlayer && <AudioListener setShowAudioPlayer={setShowAudioPlayer} />}
+      <Run isRunning={isRunning} />
     </>
   )
 }

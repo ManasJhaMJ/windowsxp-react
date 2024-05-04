@@ -2,9 +2,19 @@ import { useState } from "react"
 import Option from "./Option"
 import OptionMore from "./OptionMore"
 
-function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer, setShowImageViewer, setShowAudioPlayer }) {
+function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer, setShowImageViewer, setShowAudioPlayer, setIsRunning }) {
 
-    const [isExplorerClicked, setIsExplorerClicked] = useState(false)
+    const [isExplorerClicked, setIsExplorerClicked] = useState(false);
+    const [clickCount, setClickCount] = useState(0);
+
+    const handleRunEvent = () => {
+        if (clickCount === 0) {
+            setIsRunning(true);
+        } else {
+            alert("🏃💨 Legends say the shadow is still running...");
+        }
+        setClickCount(clickCount + 1);
+    };
 
     return (
         <>
@@ -29,8 +39,7 @@ function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer, setShowImag
                         app1="Music"
                         src2="https://res.cloudinary.com/penry/image/upload/v1474990282/SoundYel_aunogm.ico"
                         app2='ahoo baka.mp3'
-                        click={() => setShowAudioPlayer(true)}
-                    />
+                        click={() => setShowAudioPlayer(true)} />
 
                     <OptionMore src1="https://res.cloudinary.com/penry/image/upload/c_lpad,g_center,r_0,w_65/v1474990261/media_player_file_sqjlgm.png"
                         app1="Videos"
@@ -39,7 +48,8 @@ function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer, setShowImag
                         click={() => setShowVideoPlayer(true)} />
 
                     <Option src="https://res.cloudinary.com/penry/image/upload/v1474990231/application_hourglass_small_yyhy5z.ico"
-                        app="Run" />
+                        app="Run"
+                        click={handleRunEvent} />
 
                     <Option src="https://www.manasjha.me/windows-xp/images/icons/bin.png"
                         app="Recycling Bin" />
