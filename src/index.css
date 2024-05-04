@@ -32,7 +32,7 @@ a {
   z-index: 1000;
   margin: 0;
   text-align: center;
-  animation: splash 1s forwards;
+  animation: splash 7s forwards;
 }
 
 @keyframes splash {
