@@ -212,6 +212,10 @@ nav {
   flex-direction: column;
 }
 
+.inner-start a {
+  width: 100%;
+}
+
 .option {
   position: relative;
   display: flex;
