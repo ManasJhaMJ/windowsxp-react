@@ -586,6 +586,10 @@ nav {
     height: 40vh;
   }
 
+  .run.running {
+    animation: run 10s forwards;
+  }
+
   .star-github img {
     width: 60px;
     height: auto;

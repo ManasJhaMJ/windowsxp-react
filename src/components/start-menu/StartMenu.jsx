@@ -11,7 +11,7 @@ function StartMenu({ onMouseEnter, onMouseLeave, setShowVideoPlayer, setShowImag
         if (clickCount === 0) {
             setIsRunning(true);
         } else {
-            alert("The Shadow is gone. 🏃💨 Legends say the shadow is still running...");
+            alert("The shadow is gone. 🏃💨 Legends say the shadow is still running... (Refresh to see him again)");
         }
         setClickCount(clickCount + 1);
     };
