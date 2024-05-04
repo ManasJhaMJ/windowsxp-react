@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import start from '../../assets/start.webp'
 
-function Navbar({ onHoverChange }) {
+function Navbar({ onHoverChange, setShowTextViewer }) {
 
   const [date, setDate] = useState(new Date());
 
@@ -27,18 +27,18 @@ function Navbar({ onHoverChange }) {
 
       <div className="nav">
         <div className="tabs">
-          <a className="tab-inner" href="./index.html">
+          <div className="tab-inner" onClick={() => setShowTextViewer(true)}>
             <img className="tab-icons" src="https://www.manasjha.me/windows-xp/images/icons/facebook.png" alt="" />
             <h4>Read About me</h4>
-          </a>
-          <a className="tab-inner" href="./index.html">
+          </div>
+          <div className="tab-inner" onClick={() => setShowTextViewer(true)}>
             <img className="tab-icons" src="https://www.manasjha.me/windows-xp/images/icons/tweetdeck.png" alt="" />
             <h4>See my Projects</h4>
-          </a>
-          <a className="tab-inner" href="./index.html">
+          </div>
+          <div className="tab-inner" onClick={() => setShowTextViewer(true)}>
             <img className="tab-icons" src="https://www.manasjha.me/windows-xp/images/icons/outlook.png" alt="" />
             <h4>Contact Me</h4>
-          </a>
+          </div>
         </div>
         <div className="time">
           <p><img className='icons' src='https://www.manasjha.me/windows-xp/images/icons/computer.png' /></p>
