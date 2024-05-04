@@ -13,7 +13,11 @@ function TextViewer({ setShowTextViewer }) {
             <div className="text">
                 <h1>Developed by Manas Jha</h1>
                 <h2>I am a Developer and Designer</h2>
-                <h3>Windows 69 for the Win ! <br />I hope you like it !</h3>
+                <h3>
+                    Windows 69 for the Win ! <br />
+                    I hope you like it !<br />
+                    Make sure to try all the features in the start menu.<br />
+                </h3>
                 <p>
                     I designed this website to showcase my skills in web development and design.
                     I was learning react and thought of this project to learn state management and other concepts in react.
@@ -22,6 +26,7 @@ function TextViewer({ setShowTextViewer }) {
                 </p>
                 <div className="socials">
                     <h4>Connect with me</h4>
+                    <p>Click to Connect !</p>
                     <a target="_blank" href="https://www.linkedin.com/in/notmanasjha/">LinkedIn</a>
                     <a target="_blank" href="https://twitter.com/ManasJhaMJ">Twitter</a>
                     <a target="_blank" href="https://github.com/ManasJhaMJ">Github</a>
