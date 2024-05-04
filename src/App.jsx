@@ -9,6 +9,8 @@ import Run from './components/Run/Run'
 import Logoff from "./components/LogOff/Logoff";
 import TextViewer from "./components/TextViewer/TextViewer";
 
+import logo from './assets/windows69.webp'
+
 function App() {
 
   const [isNavbarHovered, setIsNavbarHovered] = useState(false);
@@ -22,6 +24,14 @@ function App() {
 
   return (
     <>
+
+      <div className="splash-screen">
+        <img src={logo} alt="windows 69 logo" />
+        <h1>Windows 69</h1>
+        <h2>Make sure you turn the volume up!</h2>
+        <p>Headphones recommended for better experience</p>
+      </div>
+
       <Navbar onHoverChange={setIsNavbarHovered} setShowTextViewer={setShowTextViewer} />
 
       {isNavbarHovered || isMenuHovered ? <StartMenu onMouseEnter={() => setIsMenuHovered(true)} onMouseLeave={() => setIsMenuHovered(false)}

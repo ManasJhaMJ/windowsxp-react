@@ -4,7 +4,7 @@ function TextViewer({ setShowTextViewer }) {
             <div className="top-bar">
                 <div className="app-name">
                     <img className="app-icon" src="https://res.cloudinary.com/penry/image/upload/w_65,h_65,c_lpad/v1474990246/directory_pictures_ualddt.png" />
-                    <h4>Text Viewer (scroll to view) </h4>
+                    <h4>Text Viewer (scroll to read more) </h4>
                 </div>
                 <div className="button-grp">
                     <img onClick={() => setShowTextViewer(false)} className="app-icon" src="https://www.manasjha.me/windows-xp/images/icons/cross.png" alt="" />

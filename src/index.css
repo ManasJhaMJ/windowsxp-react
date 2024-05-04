@@ -5,6 +5,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Tahoma";
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
@@ -16,6 +18,58 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.splash-screen {
+  background-color: #1291e8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  margin: 0;
+  text-align: center;
+  animation: splash 10s forwards;
+}
+
+@keyframes splash {
+  0% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.splash-screen h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.splash-screen h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.splash-screen p {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+
+
 
 nav {
   background-color: #1291e8;
@@ -92,7 +146,7 @@ nav {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-left: 7%;
+  padding-left: 9%;
   padding-right: 1%;
 }
 
@@ -196,7 +250,7 @@ nav {
   box-shadow: 0px 1px 4px #000;
   bottom: 6%;
   left: 1px;
-  z-index: 1000;
+  z-index: 110;
 }
 
 .inner-start {
