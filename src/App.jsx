@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './components/navbar/Navbar'
 import StartMenu from './components/start-menu/StartMenu'
 import VideoPlayer from './components/videoPlayer/VideoPlayer';
@@ -14,14 +14,32 @@ import startgithub from './assets/stargithub.svg'
 
 function App() {
 
-  const [isNavbarHovered, setIsNavbarHovered] = useState(false);
-  const [isMenuHovered, setIsMenuHovered] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showVideoPlayer, setShowVideoPlayer] = useState(false);
   const [showImageViewer, setShowImageViewer] = useState(false);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const [logoff, setLogoff] = useState(false);
   const [showTextViewer, setShowTextViewer] = useState(false);
+
+
+  const handleNavbarButtonClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleDocumentClick = (event) => {
+    if (isMenuOpen && !event.target.closest('.avoid-close')) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleDocumentClick);
+
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -35,9 +53,9 @@ function App() {
 
       <a className="star-github" target="_blank" href="https://github.com/ManasJhaMJ/windowsxp-react"><img src={startgithub} alt="Star On github" /></a>
 
-      <Navbar onHoverChange={setIsNavbarHovered} setShowTextViewer={setShowTextViewer} />
+      <Navbar onClickChange={handleNavbarButtonClick} setShowTextViewer={setShowTextViewer} />
 
-      {isNavbarHovered || isMenuHovered ? <StartMenu onMouseEnter={() => setIsMenuHovered(true)} onMouseLeave={() => setIsMenuHovered(false)}
+      {isMenuOpen ? <StartMenu
         setShowVideoPlayer={setShowVideoPlayer}
         setShowImageViewer={setShowImageViewer}
         setShowAudioPlayer={setShowAudioPlayer}

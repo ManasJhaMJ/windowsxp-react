@@ -32,7 +32,7 @@ a {
   z-index: 1000;
   margin: 0;
   text-align: center;
-  animation: splash 10s forwards;
+  animation: splash 1s forwards;
 }
 
 @keyframes splash {
@@ -40,7 +40,7 @@ a {
     opacity: 1;
   }
 
-  70% {
+  90% {
     opacity: 1;
   }
 
@@ -327,6 +327,7 @@ nav {
 
 .option p {
   margin: 0 0.8rem;
+  width: 100%;
 }
 
 .more::after {
@@ -520,7 +521,7 @@ nav {
   padding-bottom: 2rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .tab-inner {
     font-size: 1.2rem;
     width: min-content;

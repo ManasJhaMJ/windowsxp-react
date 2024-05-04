@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import start from '../../assets/start.webp'
 
-function Navbar({ onHoverChange, setShowTextViewer }) {
+function Navbar({ setShowTextViewer, onClickChange }) {
 
   const [date, setDate] = useState(new Date());
 
@@ -17,9 +17,8 @@ function Navbar({ onHoverChange, setShowTextViewer }) {
 
   return (
     <nav>
-      <button className="start-col"
-        onMouseEnter={() => onHoverChange(true)}
-        onMouseLeave={() => onHoverChange(false)}
+      <button className="start-col avoid-close"
+        onClick={onClickChange}
       >
         <img className="start-img" src={start} alt="" />
         <p className="start">Start</p>
