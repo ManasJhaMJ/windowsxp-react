@@ -69,7 +69,44 @@ a {
   padding: 0.5rem;
 }
 
+.star-github {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  margin: 0.5rem;
+}
 
+.star-github:hover {
+  animation: wiggle 0.3s infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.star-github img {
+  width: 80px;
+  height: auto;
+}
 
 nav {
   background-color: #1291e8;
@@ -547,5 +584,10 @@ nav {
   #program {
     width: 80vw;
     height: 40vh;
+  }
+
+  .star-github img {
+    width: 60px;
+    height: auto;
   }
 }

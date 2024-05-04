@@ -10,6 +10,7 @@ import Logoff from "./components/LogOff/Logoff";
 import TextViewer from "./components/TextViewer/TextViewer";
 
 import logo from './assets/windows69.webp'
+import startgithub from './assets/stargithub.svg'
 
 function App() {
 
@@ -31,6 +32,8 @@ function App() {
         <h2>Make sure you turn the volume up!</h2>
         <p>Headphones recommended for better experience</p>
       </div>
+
+      <a className="star-github" target="_blank" href="https://github.com/ManasJhaMJ/windowsxp-react"><img src={startgithub} alt="Star On github" /></a>
 
       <Navbar onHoverChange={setIsNavbarHovered} setShowTextViewer={setShowTextViewer} />
 
