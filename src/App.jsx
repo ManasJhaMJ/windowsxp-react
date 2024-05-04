@@ -21,6 +21,7 @@ function App() {
   const [isRunning, setIsRunning] = useState(false);
   const [logoff, setLogoff] = useState(false);
   const [showTextViewer, setShowTextViewer] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
 
 
   const handleNavbarButtonClick = () => {
@@ -41,6 +42,15 @@ function App() {
     };
   }, [isMenuOpen]);
 
+  const handleRunEvent = () => {
+    if (clickCount === 0) {
+      setIsRunning(true);
+    } else {
+      alert("The shadow is gone. 🏃💨 Legends say the shadow is still running... (Refresh to see him again)");
+    }
+    setClickCount(1);
+  };
+
   return (
     <>
 
@@ -60,6 +70,7 @@ function App() {
         setShowImageViewer={setShowImageViewer}
         setShowAudioPlayer={setShowAudioPlayer}
         setIsRunning={setIsRunning}
+        setClickCount={handleRunEvent}
         setLogoff={setLogoff}
       /> : null}
 

@@ -316,7 +316,7 @@ nav {
   align-items: center;
   width: 95%;
   height: 100%;
-  padding: 5px;
+  padding: 0 5px;
 }
 
 .option img {
@@ -326,7 +326,8 @@ nav {
 }
 
 .option p {
-  margin: 0 0.8rem;
+  margin: 7px 0;
+  margin-left: 0.8rem;
   width: 100%;
 }
 

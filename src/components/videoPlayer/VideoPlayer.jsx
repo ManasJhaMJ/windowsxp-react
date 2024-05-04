@@ -11,7 +11,7 @@ function VideoPlayer({ setShowVideoPlayer }) {
                 </div>
             </div>
             <div className="video">
-                <iframe width="1800" height="900" src="https://www.youtube.com/embed/8WFjE-a--PA?loop=1&autoplay=1&fs=0&controls=0&modestbranding=1&rel=0" title="Super windows error meme || windows69.vercel.app" allow="autoplay;gyroscope;"></iframe>
+                <iframe width="1800" height="900" src="https://www.youtube.com/embed/8WFjE-a--PA?loop=1&autoplay=1&fs=0&controls=0&modestbranding=1&rel=0&mute=0" title="Super windows error meme || windows69.vercel.app" allow="autoplay;gyroscope;"></iframe>
             </div>
         </div>
     )
